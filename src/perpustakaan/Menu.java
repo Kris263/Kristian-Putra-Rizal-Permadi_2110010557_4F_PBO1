@@ -11,7 +11,7 @@ public class Menu extends Perpus {
     private int[] pilih;
      
     public void pemilihan () {
-        pilih = new int [5];
+        pilih = new int [0];
         Scanner input = new Scanner(System.in);
         System.out.println("Silahkan Pilih Menu");
         System.out.println("1. Pinjam Buku");
@@ -65,6 +65,13 @@ public class Menu extends Perpus {
     }
     
     public void kembaliBuku() {
-        System.out.println("Haloo");
+        Scanner dataKembali = new Scanner(System.in);
+        
+        System.out.print("Masukkan Nama Buku yang Di kembalikan = ");
+        String namaBuku = dataKembali.nextLine();
+        setNamaBuku(namaBuku);
+        
+        System.out.println("Data Buku " +getNamaBuku()+ "Telah Disimpan Silahkan Kembalikan Buku \npada Rak Buku atau Letakan ke meja Administrasi");
+        
     }
 }
