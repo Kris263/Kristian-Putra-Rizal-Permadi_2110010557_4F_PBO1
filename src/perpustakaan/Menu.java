@@ -58,9 +58,8 @@ public class Menu extends Perpus {
             }
        } catch (java.util.InputMismatchException e) {
             System.out.println("Salah Dalam memasukkan format jumlah buku");
-       } catch (Exception e) {
-            System.out.println("Terjadi Kesalahan Umum!" +e.getMessage());
        }
+        
         System.out.println("Terima Kasih Sudah Mampir dan Membaca Ke Perpustakaan Umum Kota");
     }
     
@@ -71,7 +70,7 @@ public class Menu extends Perpus {
         String namaBuku = dataKembali.nextLine();
         setNamaBuku(namaBuku);
         
-        System.out.println("Data Buku " +getNamaBuku()+ "Telah Disimpan Silahkan Kembalikan Buku \npada Rak Buku atau Letakan ke meja Administrasi");
+        System.out.println("Data Buku " +getNamaBuku()+ " Telah Disimpan Silahkan Kembalikan Buku \npada Rak Buku atau Letakan ke meja Administrasi");
         
     }
 }
