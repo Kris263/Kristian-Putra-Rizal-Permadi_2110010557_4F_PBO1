@@ -6,7 +6,12 @@ import java.time.LocalDate;
 
 //Inheritance
 public class Menu extends Perpus {
+    
+    //array
+    private int[] pilih;
+     
     public void pemilihan () {
+        pilih = new int [5];
         Scanner input = new Scanner(System.in);
         System.out.println("Silahkan Pilih Menu");
         System.out.println("1. Pinjam Buku");
@@ -19,6 +24,8 @@ public class Menu extends Perpus {
             pinjamBuku();
         } else if (pilih == 2) {
             kembaliBuku();
+        } else {
+            System.out.println("Tidak ada dalam Menu!");
         }
     }
     
@@ -45,10 +52,12 @@ public class Menu extends Perpus {
         
             System.out.println("<============================================>");
         
-            System.out.println("Nama Buku ke - "+ i + " yang di Pinjam = " + getNamaBuku() +"\n Yang Ditulis Oleh = " +getPenulis());
+            System.out.println("Nama Buku ke - "+ i + " yang di Pinjam = " + getNamaBuku() +"\nYang Ditulis Oleh = " +getPenulis());
         
             System.out.println("<============================================>");
             }
+       } catch (java.util.InputMismatchException e) {
+            System.out.println("Salah Dalam memasukkan format jumlah buku");
        } catch (Exception e) {
             System.out.println("Terjadi Kesalahan Umum!" +e.getMessage());
        }
