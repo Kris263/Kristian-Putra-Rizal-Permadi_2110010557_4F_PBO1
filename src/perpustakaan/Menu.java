@@ -8,21 +8,21 @@ import java.time.LocalDate;
 public class Menu extends Perpus {
     
     //array
-    private int[] pilih;
+    private int[] pilihMenu;
      
     public void pemilihan () {
-        pilih = new int [0];
+        pilihMenu = new int [5];
         Scanner input = new Scanner(System.in);
         System.out.println("Silahkan Pilih Menu");
         System.out.println("1. Pinjam Buku");
         System.out.println("2. Kembalikan Buku");
         System.out.print("SIlahkan Pilih = ");
-        int pilih = input.nextInt();
+        int pilihMenu = input.nextInt();
         
         //Seleksi
-        if (pilih == 1) {
+        if (pilihMenu == 1) {
             pinjamBuku();
-        } else if (pilih == 2) {
+        } else if (pilihMenu == 2) {
             kembaliBuku();
         } else {
             System.out.println("Tidak ada dalam Menu!");
